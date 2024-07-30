@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "HEllow There!"
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - run: cat ./.github/workflows/list.txt
         name: I display the contect of list.txt
       - run: echo "I am at step 4!!"

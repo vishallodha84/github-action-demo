@@ -1,0 +1,18 @@
+name: Welcome to third workflow(third)
+on:
+  workflow_dispatch:
+    inputs:
+      #the value here is how you will reference the input in job steps
+      thename:
+        description: "What is your name"
+        type: string
+        required: true
+
+
+jobs:
+  say_hello:
+    name: "Let's greet the user!"
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello there, ${{inputs.thename}} !"
+      - run: echo "I am step2"
